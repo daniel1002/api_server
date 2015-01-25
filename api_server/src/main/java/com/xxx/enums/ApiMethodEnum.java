@@ -16,6 +16,19 @@ public enum ApiMethodEnum implements Api {
 			return paramMap;
 		}
 	},
+
+	/**
+	 * 厂商列表
+	 */
+	AUTHOR_LIST("author.list", "厂商列表", ApiServerEnum.content, ContentTypeEnum.AUTHOR, false, false, false) {
+		public Map<String, String> getApiParams() {
+			Map<String, String> paramMap = new LinkedHashMap<String, String>();
+			paramMap.put("page", "页码");
+			paramMap.put("page_size", "页大小");
+			return paramMap;
+		}
+	},
+
 	;
 
 	private String code;
